@@ -52,7 +52,7 @@ void loop() {
   int lightValue = analogRead(photoresister); // assign sensor value to variable
   
   if(lightValue<300) {
-    myservo.write(0);
+    myservo.write(0); // Turn the servo and flag up
   digitalWrite(led1,HIGH); //Turn on LED if value us lower then 500
   digitalWrite(led2,HIGH);
   digitalWrite(led3,HIGH);
@@ -91,7 +91,7 @@ int size = sizeof(durations) / sizeof(int);
   digitalWrite(led2,LOW);
   digitalWrite(led3,LOW);//Turn off LED if otherwise
   noTone(buzzer);
-  myservo.write(90);
+  myservo.write(90);//Turn down the flag
   }
   Serial.println(lightValue); //print sensor value to console
 }
