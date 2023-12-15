@@ -207,15 +207,15 @@ void loop() {
   digitalWrite(led1,HIGH); //Turn on LED if value us lower then 500
   digitalWrite(led2,HIGH);
   digitalWrite(led3,HIGH);
-  digtalWrite(led4,LOW);
+  digitalWrite(led4,LOW);
   digitalWrite(led5,LOW);
   delay(500);
   digitalWrite(led1,LOW); //Turn on LED if value us lower then 500
   digitalWrite(led2,LOW);
   digitalWrite(led3,LOW);
-  digtalWrite(led4,HIGH);
+  digitalWrite(led4,HIGH);
   digitalWrite(led5,HIGH);
-  delay(500)
+  delay(500);
 
   tone(buzzer, 330);
   myservo.write(90);
@@ -235,6 +235,7 @@ int size = sizeof(durations) / sizeof(int);
     //stop the tone playing:
     noTone(buzzer);
 
+  }
   }
   else{
   digitalWrite(led1, LOW); 
